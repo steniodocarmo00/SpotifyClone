@@ -1,9 +1,10 @@
-import { VStack, Center } from 'native-base'
+import { VStack, Center, Image } from 'native-base'
 import { useNavigation } from '@react-navigation/native'  
 
 import { Input } from '@components/Input'
 import { Button } from '@components/Button'
 
+import Logo from '@assets/logo.png'
 
 export function SignUp(){
 
@@ -16,9 +17,14 @@ export function SignUp(){
   return(
     <VStack flex={1} alignItems='center' justifyContent='center'>
       <Center>
+        <Image 
+          source={Logo}
+          alt='Spotify Logo'
+        />
 
         <Input 
           placeholder='Nome'
+          mt={24}
         />
 
         <Input 

@@ -1,4 +1,4 @@
-import { VStack, Center } from 'native-base'
+import { VStack, Center, Image } from 'native-base'
 import { useNavigation } from '@react-navigation/native'
 
 import { AuthNavigatorRoutesProps } from '@routes/auth.routes'
@@ -6,6 +6,7 @@ import { AuthNavigatorRoutesProps } from '@routes/auth.routes'
 import { Input } from '@components/Input'
 import { Button } from '@components/Button'
 
+import BackgroundImg from '@assets/background.png'
 
 export function SignIn(){
 
@@ -16,8 +17,15 @@ export function SignIn(){
   }
 
   return(
-    <VStack flex={1} alignItems='center' justifyContent='center'>
-      <Center>
+    <VStack flex={1}>
+      <Image 
+        source={BackgroundImg}
+        alt='Spotify signin background'
+        left={1}
+        position='absolute'
+      />
+      
+      <Center mt={96}>
         <Input 
           placeholder='Login'
         />

@@ -9,7 +9,7 @@ export function Input({...rest}: IInputProps){
       px={2}
       borderWidth={0}
       borderRadius={10}
-      fontSize='xl'
+      fontSize='lg'
       fontFamily='body'
       color='white'
       mb={8}

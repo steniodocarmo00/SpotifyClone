@@ -6,7 +6,7 @@ import { AuthRoutes } from "./auth.routes";
 export function Routes(){
 
     const theme = DefaultTheme;
-    theme.colors.background = '#1E1E1E'
+    theme.colors.background = '#000000'
 
   return(
     <Box flex={1} bg='codgray.950'>

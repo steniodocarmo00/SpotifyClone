@@ -11,9 +11,9 @@ export function Button({ title, variant ,...rest}: Props){
       h={11} 
       bg={variant === 'ghost' ? 'transparent' : 'green.500'}
       borderRadius={10}
-      mt={2}
+      mt={4}
       _pressed={{
-        bg: variant === 'ghost' ? '#383838' : 'green.400'
+        bg: variant === 'ghost' ? '#313131' : 'green.400'
       }}
       
       {...rest}
