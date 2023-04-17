@@ -10,7 +10,8 @@ export const THEME = extendTheme({
         800: '#494141'
       },
       green: {
-        500: '#2EBD59'
+        500: '#2EBD59',
+        400: '#54D47A'
       },
       alto: {
         300: '#D9D9D9'

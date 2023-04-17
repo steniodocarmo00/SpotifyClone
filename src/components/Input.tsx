@@ -8,7 +8,9 @@ export function Input({...rest}: IInputProps){
       w={74}
       px={2}
       borderWidth={0}
+      borderRadius={10}
       fontSize='xl'
+      fontFamily='body'
       color='white'
       mb={8}
       _focus={{
