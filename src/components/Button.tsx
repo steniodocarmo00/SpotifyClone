@@ -4,16 +4,16 @@ type Props = IButtonProps & {
   title: string;
 }
 
-export function Button({ title, ...rest}: Props){
+export function Button({ title, variant ,...rest}: Props){
   return(
     <NativeBaseButton
       w={74}
       h={11} 
-      bg='green.500'
+      bg={variant === 'ghost' ? 'transparent' : 'green.500'}
       borderRadius={10}
       mt={2}
       _pressed={{
-        bg: 'green.400'
+        bg: variant === 'ghost' ? '#383838' : 'green.400'
       }}
       
       {...rest}

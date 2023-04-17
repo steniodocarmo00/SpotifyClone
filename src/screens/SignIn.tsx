@@ -16,6 +16,7 @@ export function SignIn(){
         />
 
         <Button title='Entrar' />
+        <Button title='Criar conta.' variant='ghost' />
       </Center>
     </VStack>
   )
