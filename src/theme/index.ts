@@ -2,7 +2,7 @@ import { extendTheme } from 'native-base'
 
 export const THEME = extendTheme({
     colors: {
-      gray: {
+      codgray: {
         950: '#1E1E1E',
         800: '#383838'
       },

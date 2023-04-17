@@ -3,8 +3,7 @@ import { NativeBaseProvider } from 'native-base';
 import { useFonts, Inter_400Regular, Inter_800ExtraBold } from '@expo-google-fonts/inter'
 
 import { THEME } from './src/theme';
-import { SignIn } from '@screens/SignIn';
-import { Signup } from '@screens/Signup';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Inter_400Regular, Inter_800ExtraBold});
@@ -16,7 +15,7 @@ export default function App() {
         backgroundColor='transparent'
         translucent 
       />
-      {fontsLoaded ? <Signup /> : <View />}
+      {fontsLoaded ? <Routes /> : <View />}
     </NativeBaseProvider>
   );
 }

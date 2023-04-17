@@ -1,11 +1,20 @@
 import { VStack, Center } from 'native-base'
+import { useNavigation } from '@react-navigation/native'  
 
 import { Input } from '@components/Input'
 import { Button } from '@components/Button'
 
-export function Signup(){
+
+export function SignUp(){
+
+  const navigation = useNavigation();
+
+  function handleGoBack(){
+    navigation.goBack();
+  }
+
   return(
-    <VStack flex={1} bg='#1E1E1E' alignItems='center' justifyContent='center'>
+    <VStack flex={1} alignItems='center' justifyContent='center'>
       <Center>
 
         <Input 
@@ -28,6 +37,7 @@ export function Signup(){
         <Button 
           title='Voltar para login.' 
           variant='ghost' 
+          onPress={handleGoBack}
         />
       </Center>
     </VStack>
