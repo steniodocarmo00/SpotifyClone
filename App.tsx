@@ -4,6 +4,7 @@ import { useFonts, Inter_400Regular, Inter_800ExtraBold } from '@expo-google-fon
 
 import { THEME } from './src/theme';
 import { SignIn } from '@screens/SignIn';
+import { Signup } from '@screens/Signup';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Inter_400Regular, Inter_800ExtraBold});
@@ -15,7 +16,7 @@ export default function App() {
         backgroundColor='transparent'
         translucent 
       />
-      {fontsLoaded ? <SignIn /> : <View />}
+      {fontsLoaded ? <Signup /> : <View />}
     </NativeBaseProvider>
   );
 }
