@@ -21,7 +21,8 @@ export const THEME = extendTheme({
     },
     fonts: {
       heading: 'Inter_800ExtraBold',
-      body: 'Inter_400Regular'
+      body: 'Inter_400Regular',
+      bodybold: 'Inter_700Bold'
     },
     fontSizes: {
       xs: 12,

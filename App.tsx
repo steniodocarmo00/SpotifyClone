@@ -1,12 +1,12 @@
 import { Text, View, StatusBar } from 'react-native';
 import { NativeBaseProvider } from 'native-base';
-import { useFonts, Inter_400Regular, Inter_800ExtraBold } from '@expo-google-fonts/inter'
+import { useFonts, Inter_400Regular, Inter_800ExtraBold, Inter_700Bold } from '@expo-google-fonts/inter'
 
 import { THEME } from './src/theme';
 import { Routes } from './src/routes';
 
 export default function App() {
-  const [fontsLoaded] = useFonts({ Inter_400Regular, Inter_800ExtraBold});
+  const [fontsLoaded] = useFonts({ Inter_400Regular, Inter_800ExtraBold, Inter_700Bold});
 
   return (
     <NativeBaseProvider theme={THEME}>
