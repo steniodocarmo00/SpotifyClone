@@ -1,13 +1,14 @@
-import { HStack, Heading, VStack, Center } from "native-base";
+import { HStack, Heading, VStack, Center,Text } from "native-base";
 
 import { PlaylistCardRectangle } from "@components/PlaylistCardRectangle";
+import { PlaylistCardSquare } from "@components/PlaylistCardSquare";
 
 export function Home(){
   return(
     <VStack flex={1}>
-      <Heading color='white' mt={16} ml={2}>
-        Bem Vindo
-      </Heading>
+      <Text color='white' mt={12} ml={2} fontFamily='heading' fontSize='xl'>
+        Bem vindo
+      </Text>
 
       <Center>
         <HStack mt={8}>
@@ -26,9 +27,26 @@ export function Home(){
         </HStack>
       </Center>
 
-      <Heading color='white' mt={12} ml={2}>
-        Tocadas Recentemente
-      </Heading>
+      <Text color='white' mt={16} mb={3} ml={2} fontFamily='heading' fontSize='xl'>
+        Tocados recentemente
+      </Text>
+      
+      <HStack>
+        <PlaylistCardSquare />
+        <PlaylistCardSquare />
+        <PlaylistCardSquare />
+        </HStack>
+
+      <Text color='white' mb={3} ml={2} fontFamily='heading' fontSize='xl'>
+        Top 50 da semana
+      </Text>
+
+      <HStack>
+        <PlaylistCardSquare />
+        <PlaylistCardSquare />
+        <PlaylistCardSquare />
+      </HStack>
+
     </VStack>
   )
 }
