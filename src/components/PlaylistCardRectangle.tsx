@@ -8,8 +8,8 @@ type Props = TouchableOpacityProps
 export function PlaylistCardRectangle({...rest}: Props){
   return(
     <TouchableOpacity {...rest}>
-      <HStack alignItems='center' backgroundColor='#313131' mr={2} mb={2} borderRadius={4}>
-        <Text color='#FFFFFF' fontFamily='Inter_700Bold' fontSize='md' ml={2}>
+      <HStack alignItems='center' bg='#313131' mr={2} mb={2} borderRadius={4}>
+        <Text color='white' fontFamily='Inter_700Bold' fontSize='md' ml={2}>
           Texto
         </Text>
 
@@ -19,7 +19,7 @@ export function PlaylistCardRectangle({...rest}: Props){
           h={12}    
           w={12}
           ml={20}
-          borderRightRadius={4}
+          borderRadius={4}
         />
       </HStack>
     </TouchableOpacity>

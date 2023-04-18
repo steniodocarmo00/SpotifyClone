@@ -2,6 +2,7 @@ import { HStack, Heading, VStack, Center,Text } from "native-base";
 
 import { PlaylistCardRectangle } from "@components/PlaylistCardRectangle";
 import { PlaylistCardSquare } from "@components/PlaylistCardSquare";
+import { MiniPlayer } from "@components/MiniPlayer";
 
 export function Home(){
   return(
@@ -46,6 +47,8 @@ export function Home(){
         <PlaylistCardSquare />
         <PlaylistCardSquare />
       </HStack>
+
+      <MiniPlayer />
 
     </VStack>
   )
