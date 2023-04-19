@@ -1,17 +1,18 @@
 import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
-import { HStack, Image, Text, VStack, Center } from 'native-base';
+import { HStack, Image, Text, VStack } from 'native-base';
 
-import Icon from '@assets/playlistIcon.png';
+type Props = TouchableOpacityProps & {
+  PlaylistName: string;
+  PlaylistImage: string;
+}
 
-type Props = TouchableOpacityProps 
-
-export function PlaylistCardSquare({...rest}: Props){
+export function PlaylistCardSquare({PlaylistName, PlaylistImage, ...rest}: Props){
   return(
     <TouchableOpacity {...rest}>
         <HStack alignItems='center'>
-          <VStack ml={6}>
+          <VStack ml={7}>
             <Image 
-              source={Icon}
+              source={{uri: PlaylistImage}}
               alt="Playlist Icon"
               h={24}
               w={24}
@@ -19,7 +20,7 @@ export function PlaylistCardSquare({...rest}: Props){
             />
           
             <Text color='white' fontSize='md' mb={5}>
-              Texto
+              {PlaylistName}
             </Text>
           </VStack>
         </HStack>

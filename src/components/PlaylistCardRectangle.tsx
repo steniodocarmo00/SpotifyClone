@@ -1,26 +1,28 @@
 import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
-import { HStack, Image, Text } from 'native-base';
+import { HStack, Image, Text, VStack } from 'native-base';
 
-import Icon from '@assets/playlistIcon.png';
+type Props = TouchableOpacityProps & {
+  PlaylistName: string;
+  PlaylistImage: string;
+}
 
-type Props = TouchableOpacityProps 
-
-export function PlaylistCardRectangle({...rest}: Props){
+export function PlaylistCardRectangle({PlaylistName, PlaylistImage ,...rest}: Props){
   return(
     <TouchableOpacity {...rest}>
-      <HStack alignItems='center' bg='#313131' mr={2} mb={2} borderRadius={4}>
-        <Text color='white' fontFamily='Inter_700Bold' fontSize='md' ml={2}>
-          Texto
-        </Text>
-
+      <HStack alignItems='center' bg='#313131' mr={2} mb={2} borderRadius={4} w={46}>
         <Image 
-          source={Icon}
+          source={{uri: PlaylistImage}}
           alt="Playlist Icon"
           h={12}    
           w={12}
-          ml={20}
           borderRadius={4}
         />
+        
+        <VStack>
+          <Text color='white' fontFamily='Inter_700Bold' fontSize='md' ml={2}>
+            {PlaylistName}
+          </Text>
+        </VStack>
       </HStack>
     </TouchableOpacity>
   )

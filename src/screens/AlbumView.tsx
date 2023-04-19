@@ -2,7 +2,6 @@ import { VStack, HStack, Text, Image, Center, ScrollView, Icon, Pressable } from
 import { useNavigation } from '@react-navigation/native';
 import { NavigatorRoutesProps } from '@routes/app.routes'
 
-import PlaylistIcon from '@assets/playlistIcon.png'
 import { Ionicons } from '@expo/vector-icons'
 
 import { ArtistName } from '@components/ArtistName';
@@ -32,7 +31,7 @@ export function AlbumView(){
 
       <Center>
         <Image
-          source={PlaylistIcon}
+          source={{uri: 'https://i.scdn.co/image/ab67616d0000b273d491c823e85c89df4e75d7fe'}}
           alt="Icone de Album"
           w={56}
           h={56}
@@ -40,23 +39,21 @@ export function AlbumView(){
         />
       </Center>
       <Text color='white' fontSize='xl2' fontFamily='heading' mb={4} ml={4} mr={4}>
-        Virei Canibal Remix
+        Selected & Tragic
       </Text>
 
-      <ArtistName />
+      <ArtistName ArtistName="Astrophysics"/>
 
       <AlbumMenu />
 
-      <MusicItem />
-      <MusicItem />
-      <MusicItem />
-      <MusicItem />
-      <MusicItem />
-      <MusicItem />
-      <MusicItem />
-      <MusicItem />
-      <MusicItem />
-      <MusicItem />
+      <MusicItem MusicName="everytime i pick up the phone"/>
+      <MusicItem MusicName="arrogant"/>
+      <MusicItem MusicName="Kamemushi - Demo"/>
+      <MusicItem MusicName="Clean Silk - Demo"/>
+      <MusicItem MusicName="opium"/>
+      <MusicItem MusicName="watch me suffer"/>
+      <MusicItem MusicName="hazy shimmers"/>
+      <MusicItem MusicName="Malfunction"/>
     
     </VStack>
     </ScrollView>

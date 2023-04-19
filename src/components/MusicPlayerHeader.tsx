@@ -1,4 +1,4 @@
-import { VStack, HStack, Text, Icon, IconButton, IIconButtonProps, Pressable, IPressableProps } from "native-base";
+import { VStack, HStack, Text, Icon, IconButton, IIconButtonProps, Pressable, IPressableProps } from 'native-base';
 
 import { Ionicons } from '@expo/vector-icons'
 
@@ -9,7 +9,7 @@ type Props = IIconButtonProps & IPressableProps & {
 
 export function MusicPlayerHeader({iconButtonOnPress, pressableOnPress}: Props){
   return(
-    <HStack mt={12} alignItems='center' mb={20}>
+    <HStack mt={12} alignItems='center'>
       <IconButton onPress={iconButtonOnPress} ml={4} mr={24}>
         <Icon 
           as={Ionicons}
@@ -21,7 +21,7 @@ export function MusicPlayerHeader({iconButtonOnPress, pressableOnPress}: Props){
 
       <VStack alignItems='center'>
         <Text color='white'>Tocando Álbum:</Text>
-        <Pressable w={12} h={4} onPress={pressableOnPress}>
+        <Pressable w={12} h={6} onPress={pressableOnPress}>
           <Text color='white'>Álbum</Text>
         </Pressable>
       </VStack>

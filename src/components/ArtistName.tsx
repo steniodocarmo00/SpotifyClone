@@ -1,12 +1,14 @@
 import { VStack, HStack, Text, Image } from 'native-base';
 
-import PlaylistIcon from '@assets/playlistIcon.png';
+type Props = {
+  ArtistName: string;
+}
 
-export function ArtistName(){
+export function ArtistName({ArtistName}: Props){
   return(
   <HStack alignItems='center'>
     <Image 
-      source={PlaylistIcon}
+      source={{uri: 'https://i.scdn.co/image/ab67616d0000b273d491c823e85c89df4e75d7fe'}}
       alt="Icone do artista"
       w={4}
       h={4}
@@ -17,7 +19,7 @@ export function ArtistName(){
         
     <VStack alignItems='center'>
       <Text color='white' fontSize='xs' fontFamily='bodybold'>
-        Fábio VIREI CANIBAL
+        {ArtistName}
       </Text>
 
     </VStack>

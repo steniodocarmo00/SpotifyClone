@@ -1,4 +1,4 @@
-import { VStack, Text } from "native-base";
+import { VStack, Text } from 'native-base';
 
 export function LyricsCard(){
   return(
@@ -8,7 +8,15 @@ export function LyricsCard(){
         Letra
       </Text>
       <Text color='white' fontFamily='heading' fontSize='xl' ml={4} mr={4}>
-        I wish that we where on TV Just like in pokemon
+      Malfunction now{'\n'}
+      Couldn't see you there{'\n'}
+      Tired of my flaws{'\n'}
+      Tired of it all{'\n'}
+      {'\n'}
+      Laughing at the wind{'\n'}
+      Bursting into tears{'\n'}
+      Tired of my faults{'\n'}
+      Ever tired anyhow ...{'\n'} 
       </Text>
     </VStack>
   )
