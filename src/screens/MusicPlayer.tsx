@@ -15,10 +15,14 @@ export function MusicPlayer(){
     navigation.goBack()
   }
 
+  function musicPlayerAlbum(){
+    navigation.navigate('AlbumView')
+  }
+
   return(
     <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
       <VStack flex={1}>
-        <MusicPlayerHeader onPress={musicPlayerDown}/>
+        <MusicPlayerHeader iconButtonOnPress={musicPlayerDown} pressableOnPress={musicPlayerAlbum}/>
         <Center>
           <Image 
           source={PlaylistIcon}

@@ -1,13 +1,12 @@
-import { HStack, VStack , Text, Image, Icon, Slider} from "native-base";
-import { TouchableOpacity, TouchableOpacityProps } from "react-native";
+import { HStack, VStack , Text, Image, Icon, Slider, Pressable, IPressableProps} from "native-base";
 import PlaylistIcon from '@assets/playlistIcon.png'
 import { Foundation } from '@expo/vector-icons'
 
-type Props = TouchableOpacityProps
+type Props = IPressableProps
 
 export function MiniPlayer({...rest}: Props){
   return(
-    <TouchableOpacity {...rest}>
+    <Pressable {...rest}>
       <HStack bg='#313131' w={96} alignItems='center' alignSelf='center' borderRadius={8}>
         <HStack ml={2} mt={2} mb={-2} textAlign='center'>
           <Image 
@@ -35,7 +34,7 @@ export function MiniPlayer({...rest}: Props){
           right={24}
         />
       </HStack>
-    </TouchableOpacity>
+    </Pressable>
 
   )
 }

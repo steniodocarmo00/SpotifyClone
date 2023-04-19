@@ -3,6 +3,7 @@ import { useNavigation } from "@react-navigation/native";
 
 import { NavigatorRoutesProps } from "@routes/app.routes";
 
+import { ScrollView } from "native-base";
 import { PlaylistCardRectangle } from "@components/PlaylistCardRectangle";
 import { PlaylistCardSquare } from "@components/PlaylistCardSquare";
 import { MiniPlayer } from "@components/MiniPlayer";
@@ -15,7 +16,8 @@ export function Home(){
   }
 
   return(
-    <VStack flex={1}>
+    <ScrollView>
+      <VStack flex={1}>
       <Text color='white' mt={12} ml={2} fontFamily='heading' fontSize='xl'>
         Bem vindo
       </Text>
@@ -60,5 +62,7 @@ export function Home(){
       <MiniPlayer onPress={musicPlayerUp}/>
 
     </VStack>
+    </ScrollView>
+    
   )
 }
