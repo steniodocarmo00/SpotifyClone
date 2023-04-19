@@ -1,4 +1,4 @@
-import { Center, Image, Spinner } from "native-base";
+import { Center, Image, Spinner } from 'native-base';
 
 import Logo from '@assets/logo.png'
 

@@ -1,7 +1,7 @@
-import {  Box } from "native-base";
-import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
+import {  Box } from 'native-base';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 
-import { AppRoutes } from "./app.routes";
+import { AppRoutes } from './app.routes';
 
 export function Routes(){
 
