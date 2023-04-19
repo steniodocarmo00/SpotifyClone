@@ -10,6 +10,7 @@ export const THEME = extendTheme({
         600: '#605454',
         800: '#494141'
       },
+      red: '#DC143C',
       green: {
         500: '#2EBD59',
         400: '#54D47A'
@@ -36,7 +37,9 @@ export const THEME = extendTheme({
     sizes: {
       11: 44,
       13: 52,
+      22: 88,
       74: 296,
+      87: 348,
       92: 368
     }
 })

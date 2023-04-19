@@ -7,14 +7,15 @@ type Props = TouchableOpacityProps
 
 export function MusicPlayerHeader({...rest}: Props){
   return(
-    <HStack mt={12} alignItems='center' alignSelf='center' mb={20}>
+    <HStack mt={12} alignItems='center' mb={20}>
       <TouchableOpacity {...rest}>
         <Icon 
           as={Ionicons}
           name='chevron-down-sharp'
           color='white'
           size={8}
-          right={24}
+          ml={4}
+          mr={24}
         />
       </TouchableOpacity>
 
@@ -29,7 +30,7 @@ export function MusicPlayerHeader({...rest}: Props){
           name='md-ellipsis-vertical'
           color='white'
           size={6}
-          left={24}
+          ml={20}
         />
       </TouchableOpacity>
     </HStack>
