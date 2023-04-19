@@ -1,19 +1,19 @@
 import { VStack, HStack, Text, Image, Center, ScrollView, Icon, Pressable } from "native-base";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation } from '@react-navigation/native';
 import { NavigatorRoutesProps } from '@routes/app.routes'
 
 import PlaylistIcon from '@assets/playlistIcon.png'
 import { Ionicons } from '@expo/vector-icons'
 
-import { ArtistName } from "@components/ArtistName";
-import { AlbumMenu } from "@components/AlbumMenu";
-import { MusicItem } from "@components/MusicItem";
+import { ArtistName } from '@components/ArtistName';
+import { AlbumMenu } from '@components/AlbumMenu';
+import { MusicItem } from '@components/MusicItem';
 
 export function AlbumView(){
   const navigation = useNavigation<NavigatorRoutesProps>();
 
   function handleGoBack(){
-    navigation.navigate('Home');
+    navigation.navigate('home');
   }
 
   return(

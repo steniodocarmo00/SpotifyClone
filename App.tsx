@@ -13,7 +13,7 @@ export default function App() {
   return (
     <NativeBaseProvider theme={THEME}>
       <StatusBar 
-        barStyle="light-content" 
+        barStyle='light-content' 
         backgroundColor='transparent'
         translucent 
       />

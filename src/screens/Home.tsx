@@ -1,18 +1,18 @@
-import { HStack, VStack, Center,Text } from "native-base";
-import { useNavigation } from "@react-navigation/native";
+import { HStack, VStack, Center,Text } from 'native-base';
+import { useNavigation } from '@react-navigation/native';
 
-import { NavigatorRoutesProps } from "@routes/app.routes";
+import { NavigatorRoutesProps } from '@routes/app.routes';
 
-import { ScrollView } from "native-base";
-import { PlaylistCardRectangle } from "@components/PlaylistCardRectangle";
-import { PlaylistCardSquare } from "@components/PlaylistCardSquare";
-import { MiniPlayer } from "@components/MiniPlayer";
+import { ScrollView } from 'native-base';
+import { PlaylistCardRectangle } from '@components/PlaylistCardRectangle';
+import { PlaylistCardSquare } from '@components/PlaylistCardSquare';
+import { MiniPlayer } from '@components/MiniPlayer';
 
 export function Home(){
   const navigation = useNavigation<NavigatorRoutesProps>();
   
   function musicPlayerUp(){
-    navigation.navigate('MusicPlayer')
+    navigation.navigate('musicPlayer')
   }
 
   return(

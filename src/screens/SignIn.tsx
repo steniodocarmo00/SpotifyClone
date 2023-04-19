@@ -17,7 +17,7 @@ export function SignIn(){
   }
 
   function handleLogin(){
-    navigation.navigate('Home')
+    navigation.navigate('home')
   }
 
   return(

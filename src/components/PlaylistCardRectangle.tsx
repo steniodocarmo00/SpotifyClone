@@ -1,5 +1,5 @@
-import { TouchableOpacity, TouchableOpacityProps } from "react-native";
-import { HStack, Image, Text } from "native-base";
+import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
+import { HStack, Image, Text } from 'native-base';
 
 import Icon from '@assets/playlistIcon.png';
 

@@ -1,4 +1,4 @@
-import { HStack, Icon } from "native-base";
+import { HStack, Icon } from 'native-base';
 
 import { Ionicons } from '@expo/vector-icons';
 

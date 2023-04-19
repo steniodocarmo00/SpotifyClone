@@ -10,10 +10,10 @@ import { SplashScreen } from '@screens/SplashScreen';
 type AppRoutes = {
   signIn: undefined;
   signUp: undefined;
-  Home: undefined;
-  MusicPlayer: undefined;
-  AlbumView: undefined;
-  SplashScreen: undefined
+  home: undefined;
+  musicPlayer: undefined;
+  albumView: undefined;
+  splashScreen: undefined
 }
 
 export type NavigatorRoutesProps = NativeStackNavigationProp<AppRoutes>;
@@ -25,7 +25,7 @@ export function AppRoutes(){
     <Navigator screenOptions={{ headerShown : false }}>
 
       <Screen 
-        name='SplashScreen'
+        name='splashScreen'
         component={SplashScreen}
       />
       
@@ -40,12 +40,12 @@ export function AppRoutes(){
       />
       
       <Screen 
-        name='Home'
+        name='home'
         component={Home}
       />
 
       <Screen 
-        name='MusicPlayer'
+        name='musicPlayer'
         component={MusicPlayer}
         options={{
           animation: 'slide_from_bottom',
@@ -54,7 +54,7 @@ export function AppRoutes(){
       />
 
       <Screen 
-        name='AlbumView'
+        name='albumView'
         component={AlbumView} 
       />
       

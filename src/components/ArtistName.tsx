@@ -1,4 +1,4 @@
-import { VStack, HStack, Text, Image } from "native-base";
+import { VStack, HStack, Text, Image } from 'native-base';
 
 import PlaylistIcon from '@assets/playlistIcon.png';
 
