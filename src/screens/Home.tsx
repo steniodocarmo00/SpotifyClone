@@ -1,10 +1,19 @@
-import { HStack, Heading, VStack, Center,Text } from "native-base";
+import { HStack, VStack, Center,Text } from "native-base";
+import { useNavigation } from "@react-navigation/native";
+
+import { NavigatorRoutesProps } from "@routes/app.routes";
 
 import { PlaylistCardRectangle } from "@components/PlaylistCardRectangle";
 import { PlaylistCardSquare } from "@components/PlaylistCardSquare";
 import { MiniPlayer } from "@components/MiniPlayer";
 
 export function Home(){
+  const navigation = useNavigation<NavigatorRoutesProps>();
+  
+  function musicPlayerUp(){
+    navigation.navigate('MusicPlayer')
+  }
+
   return(
     <VStack flex={1}>
       <Text color='white' mt={12} ml={2} fontFamily='heading' fontSize='xl'>
@@ -48,7 +57,7 @@ export function Home(){
         <PlaylistCardSquare />
       </HStack>
 
-      <MiniPlayer />
+      <MiniPlayer onPress={musicPlayerUp}/>
 
     </VStack>
   )

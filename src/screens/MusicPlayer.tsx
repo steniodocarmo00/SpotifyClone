@@ -1,5 +1,5 @@
 import { VStack, Center, Text, Image, HStack, Icon, Slider, ScrollView } from "native-base";
-import { AuthNavigatorRoutesProps } from '@routes/auth.routes';
+import { NavigatorRoutesProps } from '@routes/app.routes';
 import { useNavigation } from "@react-navigation/native";
 
 import PlaylistIcon from '@assets/playlistIcon.png'
@@ -9,10 +9,10 @@ import { MusicPlayerHeader } from "@components/MusicPlayerHeader";
 import { LyricsCard } from "@components/LyricsCard";
 
 export function MusicPlayer(){
-  const navigation = useNavigation<AuthNavigatorRoutesProps>();
+  const navigation = useNavigation<NavigatorRoutesProps>();
 
   function musicPlayerDown(){
-    navigation.navigate('Home')
+    navigation.goBack()
   }
 
   return(

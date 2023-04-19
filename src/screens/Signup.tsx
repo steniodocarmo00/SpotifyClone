@@ -19,6 +19,7 @@ export function SignUp(){
       <Center>
         <Image 
           source={Logo}
+          defaultSource={Logo}
           alt='Spotify Logo'
         />
 
