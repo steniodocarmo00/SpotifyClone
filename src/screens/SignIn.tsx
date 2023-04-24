@@ -1,7 +1,7 @@
 import { VStack, Center, Image } from 'native-base'
 import { useNavigation } from '@react-navigation/native'
 
-import { NavigatorRoutesProps } from '@routes/app.routes'
+import { NavigatorRoutesProps } from '@routes/auth.routes'
 
 import { Input } from '@components/Input'
 import { Button } from '@components/Button'
@@ -14,10 +14,6 @@ export function SignIn(){
 
   function handleNewAccount(){
     navigation.navigate('signUp')
-  }
-
-  function handleLogin(){
-    navigation.navigate('home')
   }
 
   return(
@@ -41,7 +37,6 @@ export function SignIn(){
 
         <Button 
           title='Entrar'
-          onPress={handleLogin} 
         />
 
         <Button title='Criar conta.' 
