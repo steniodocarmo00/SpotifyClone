@@ -18,6 +18,7 @@ export function SignIn(){
 
   return(
     <VStack flex={1}>
+
       <Image 
         source={BackgroundImg}
         defaultSource={BackgroundImg}
