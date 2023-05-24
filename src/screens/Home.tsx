@@ -1,7 +1,9 @@
-import { HStack, VStack, Center,Text } from 'native-base';
+import { HStack, VStack, Center,Text, Pressable } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
 
 import { NavigatorRoutesProps } from '@routes/app.routes';
+
+import { Ionicons } from '@expo/vector-icons'
 
 import { ScrollView } from 'native-base';
 import { PlaylistCardRectangle } from '@components/PlaylistCardRectangle';
@@ -18,9 +20,14 @@ export function Home(){
   return(
     <ScrollView>
       <VStack flex={1}>
-      <Text color='white' mt={12} ml={2} fontFamily='heading' fontSize='xl'>
-        Bem vindo
-      </Text>
+        <HStack>
+          <Text color='white' mt={12} ml={2} fontFamily='heading' fontSize='xl'>
+            Bem vindo
+          </Text>
+
+
+        </HStack>
+        
 
       <Center>
         <HStack mt={8}>

@@ -1,15 +1,19 @@
-import { useState } from 'react'
+import { useForm, Controller } from 'react-hook-form';
 
-import { VStack, Center, Image, Text } from 'native-base'
-import { useNavigation } from '@react-navigation/native'  
-import { useForm, Controller } from 'react-hook-form'
-import {yupResolver} from '@hookform/resolvers/yup'
+import { Alert } from 'react-native';
+import { VStack, Center, Image} from 'native-base';
+import { useNavigation } from '@react-navigation/native';
+
+import {yupResolver} from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-import { Input } from '@components/Input'
-import { Button } from '@components/Button'
+import { auth } from '../../firebase.config'
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
-import Logo from '@assets/logo.png'
+import { Input } from '@components/Input';
+import { Button } from '@components/Button';
+
+import Logo from '@assets/logo.png';
 
 
 type FormDataProps = {
@@ -32,7 +36,7 @@ export function SignUp(){
     resolver: yupResolver(signUpSchema)
   });
 
-  const navigation = useNavigation();
+  const navigation = useNavigation(); 
 
   function handleGoBack(){
     navigation.goBack();
@@ -40,6 +44,9 @@ export function SignUp(){
 
   function handleSignUp({name, email, password, password_confirm}: FormDataProps){
     console.log({name, email, password, password_confirm})
+    createUserWithEmailAndPassword(auth ,email, password)
+    .then(() => Alert.alert("Cadastro", "Cadastrado com sucesso"))
+    .catch((error: Error) => console.log(error))
     
   }
 
